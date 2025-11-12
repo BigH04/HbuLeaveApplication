@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/values.css" />
+    <script src = "js/jquary.js"></script>
+    <script src = "js/jquery.cookie.min.js"></script>
+    <script src = "js/submit.js"></script>
+</head>
+<body>
+    <div class="windows">
+        <h3>河北大学请假条生成器</h3>
+        <div class="name">
+            <div class = "content">姓名</div>
+            <div>:</div>
+            <input type="text">
+        </div>
+        <div class="academy">
+            <div class = "content">学院</div>
+            <div>:</div>
+            <input type="text" id = "academy">
+        </div>
+        <div class="studentId">
+            <div class = "content">学号</div>
+            <div>:</div>
+            <input type="text" id = "studentId">
+        </div>
+        <div class="start_term">
+            <div class = "content">开始时间</div>
+            <div>:</div>
+            <input type="datetime-local" id="start_term" name="dateTimeInput" step="3600">
+        </div>
+        <div class="end_term">
+            <div class = "content">结束时间</div>
+            <div>:</div>
+            <input type="datetime-local" id="end_term" name="dateTimeInput" step="3600">
+        </div>
+        <div class="issuance">
+            <div class = "content">签发时间</div>
+            <div>:</div>
+            <!-- <input type="text" id = "issuance"> -->
+            <input type="date" id="issuance">
+        </div>
+        <input type="button" value="提交" id = "submit">
+        
+    </div>
+    
+</body>
+</html>
