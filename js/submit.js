@@ -2,7 +2,6 @@ var test = false;
 var avatarBase64 = "";
 $(document).ready(function(){
      $("#avatarInput").on("change", function(e) {
-        alert("nihao")
         var file = e.target.files[0];
         if (!file) return;
         if (!file.type.startsWith('image/')) {
@@ -56,15 +55,11 @@ $(document).ready(function(){
         $.cookie("start_term",start_term);
         $.cookie("end_term",end_term);
         $.cookie("issuance",issuance);
-         $.cookie("avatar", avatarBase64);
+        $.cookie("avatar", avatarBase64);
         window.location.href = "create.html";
 
-
-
-
-       
-
-
-
+    })
+    $("#clearA").on("click",function(){
+        $.removeCookie("avatar", { path: '/' });
     })
 })

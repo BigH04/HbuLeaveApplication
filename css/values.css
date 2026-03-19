@@ -69,7 +69,18 @@ h3{
     font-size: 40px;
     
 }
-
+#clearA{
+    display: block;
+    width: 200px;
+    height: 80px;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 30px;
+    background-color: #c5aaa1;
+    color: white;
+    font-size: 40px;
+    
+}
 
 .avatar-container {
     display: flex;
