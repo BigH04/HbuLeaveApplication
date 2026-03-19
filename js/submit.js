@@ -1,5 +1,21 @@
 var test = false;
+var avatarBase64 = "";
 $(document).ready(function(){
+     $("#avatarInput").on("change", function(e) {
+        alert("nihao")
+        var file = e.target.files[0];
+        if (!file) return;
+        if (!file.type.startsWith('image/')) {
+            alert("请上传图片格式的文件！");
+            return;
+        }
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            avatarBase64 = e.target.result;
+            $("#avatarPreview").attr("src", avatarBase64).show();
+        };
+        reader.readAsDataURL(file);
+    });
     $("#submit").on("click",function(){
         // alert("wocaonima ")
         var name = $(".name input").val();
@@ -40,7 +56,7 @@ $(document).ready(function(){
         $.cookie("start_term",start_term);
         $.cookie("end_term",end_term);
         $.cookie("issuance",issuance);
-        // 跳转到其他页面
+         $.cookie("avatar", avatarBase64);
         window.location.href = "create.html";
 
 

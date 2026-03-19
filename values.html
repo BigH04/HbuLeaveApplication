@@ -12,32 +12,43 @@
 <body>
     <div class="windows">
         <h3>河北大学请假条生成器</h3>
-        <div class="name">
+
+         <div class="avatar-container">
+            <div class="avatar-left">
+                <label class="avatar-label">上传头像</label>
+                <label for="avatarInput" class="avatar-upload-btn">选择图片</label>
+                <input type="file" id="avatarInput" accept="image/png, image/jpeg, image/jpg" style="display:none;">
+            </div>
+            <div class="avatar-right">
+                <img id="avatarPreview" src="" alt="头像预览">
+            </div>
+        </div>
+        <div class="name inputItem">
             <div class = "content">姓名</div>
             <div>:</div>
             <input type="text">
         </div>
-        <div class="academy">
+        <div class="academy inputItem">
             <div class = "content">学院</div>
             <div>:</div>
             <input type="text" id = "academy">
         </div>
-        <div class="studentId">
+        <div class="studentId inputItem">
             <div class = "content">学号</div>
             <div>:</div>
             <input type="text" id = "studentId">
         </div>
-        <div class="start_term">
+        <div class="start_term inputItem">
             <div class = "content">开始时间</div>
             <div>:</div>
             <input type="datetime-local" id="start_term" name="dateTimeInput" step="3600">
         </div>
-        <div class="end_term">
+        <div class="end_term inputItem">
             <div class = "content">结束时间</div>
             <div>:</div>
             <input type="datetime-local" id="end_term" name="dateTimeInput" step="3600">
         </div>
-        <div class="issuance">
+        <div class="issuance inputItem">
             <div class = "content">签发时间</div>
             <div>:</div>
             <!-- <input type="text" id = "issuance"> -->

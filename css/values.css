@@ -18,7 +18,7 @@
     
 }
 
-.windows>div{
+.windows>.inputItem{
     width: 70%;
     height: 50px;
     background-color: #a28c88;
@@ -68,4 +68,73 @@ h3{
     color: white;
     font-size: 40px;
     
+}
+
+
+.avatar-container {
+    display: flex;
+    align-items: center;
+    margin: 15px 15%; 
+    padding: 10px 0;
+    box-sizing: border-box; 
+    max-width: 100%;
+}
+
+
+.avatar-left {
+    display: flex;
+    flex-direction: column; 
+    gap: 12px;
+    margin-right: 20px; 
+    flex-shrink: 0;
+}
+
+
+.avatar-label {
+    font-size: 15px;
+    color: #333;
+    text-align-last: justify;
+    width: 100px; 
+    display: block; 
+}
+
+
+.avatar-upload-btn {
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #c5aaa1;
+    color: #333;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    font-size: 15px;
+    border: none;
+    display: block; 
+}
+
+
+.avatar-right {
+    flex-shrink: 0; 
+    max-width: 150px; 
+}
+
+#avatarInput {
+    opacity: 0; 
+    width: 0;
+    height: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+
+
+#avatarPreview {
+    width: 100px;
+    height: 100px;
+    display: none;
+    border-radius: 10px; 
+    border: 1px solid #a28c88; 
+    object-fit: cover; 
+    max-width: 100%; 
 }

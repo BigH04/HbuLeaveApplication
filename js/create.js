@@ -27,6 +27,11 @@ $(document).ready(function(){
     if (issuance == undefined){
        issuance = "签发时间"
     }
+    var avatarBase64 = $.cookie("avatar");
+    if (avatarBase64 !== undefined && avatarBase64 !== "" && avatarBase64.startsWith("data:image/")) {
+        
+        $("#avatarImg").attr("src", avatarBase64);
+    }
     a = issuance;
     issuance =  a.slice(0,4)+"年"+a.slice(5,7)+"月"+a.slice(8,10)+"日";
     $(".name .value").text(name)
